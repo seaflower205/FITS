@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="vi-en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FITS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="logo.png" /> 
+  </head>
+  <!-- bắt đầu ở chế độ dark -->
+  <body class="dark">
+    <div class="app">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <!-- nút F để click thu/mở -->
+          <button
+            id="toggleSidebarBtn"
+            class="logo-btn"
+            title="Nhấn chuột hoặc phím F để thu gọn/mở rộng sidebar"
+          >
+            F
+          </button>
+          <span class="logo-text">FITS</span>
+        </div>
+
+        <nav class="sidebar-menu">
+          <div class="menu-item active">
+            <span class="menu-icon">🏠</span>
+            <span class="menu-text">Dashboard</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-icon">🧬</span>
+            <span class="menu-text">Operators</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-icon">📦</span>
+            <span class="menu-text">JSON Tools</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-icon">⚙️</span>
+            <span class="menu-text">Settings</span>
+          </div>
+        </nav>
+
+        <div class="sidebar-footer">
+          <span class="footer-text">© 2025 FITS</span>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <div class="main">
+        <header class="topbar">
+          <h1 class="topbar-title">FITS</h1>
+
+          <div class="topbar-actions">
+            <span class="hint">
+              Phím <strong>F</strong> = thu/mở sidebar
+            </span>
+            <button id="toggleThemeBtn" class="theme-btn">
+              Đổi nền: Trắng / Đen
+            </button>
+          </div>
+        </header>
+
+        <main class="content">
+          <section class="card">
+            <h2>Chào mừng tới FITS</h2>
+            <p>
+              Đây là layout cơ bản với sidebar. Bạn có thể thêm các công cụ như
+              chọn nhân vật Arknights, tính hiệu suất base, export JSON cho MAA
+              vào khu vực nội dung này.
+            </p>
+          </section>
+
+          <section class="card">
+            <h3>Hướng dẫn nhanh</h3>
+            <ul>
+              <li>Nhấn chữ <strong>F</strong> trên bàn phím để thu gọn / mở sidebar.</li>
+              <li>Click vào nút chữ <strong>F</strong> trong sidebar cũng được.</li>
+              <li>Nhấn nút <strong>Đổi nền: Trắng / Đen</strong> để chuyển theme.</li>
+              <li>
+                Thêm code và UI cho tool của bạn vào phần <code>&lt;main class="content"&gt;</code>.
+              </li>
+            </ul>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+     
