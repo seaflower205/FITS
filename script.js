@@ -40,3 +40,16 @@ function toggleTheme() {
 
 // Click nút đổi theme
 toggleThemeBtn.addEventListener("click", toggleTheme);
+
+document.addEventListener("keydown", (event) => {
+  const activeTag = document.activeElement.tagName;
+  const typingInInput =
+    activeTag === "INPUT" || activeTag === "TEXTAREA" || activeTag === "SELECT";
+
+  if (typingInInput) return;
+
+  if (event.key === "l" || event.key === "L") {
+    event.preventDefault();
+    toggleTheme();
+  }
+});

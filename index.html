@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/png" href="logo.png" /> 
   </head>
-  <!-- bắt đầu ở chế độ dark -->
-  <body class="dark">
+  <!--dark mode-->
+  <body class="light-theme">
     <div class="app">
       <!-- SIDEBAR -->
       <aside class="sidebar">
         <div class="sidebar-header">
-          <!-- nút F để click thu/mở -->
+          <!-- press F to open/close sidebar -->
           <button
             id="toggleSidebarBtn"
             class="logo-btn"
-            title="Nhấn chuột hoặc phím F để thu gọn/mở rộng sidebar"
+            title="Press F to open/close sidebar"
           >
             F
           </button>
@@ -26,25 +26,21 @@
 
         <nav class="sidebar-menu">
           <div class="menu-item active">
-            <span class="menu-icon">🏠</span>
             <span class="menu-text">Dashboard</span>
           </div>
           <div class="menu-item">
-            <span class="menu-icon">🧬</span>
-            <span class="menu-text">Operators</span>
+            <span class="menu-text">Maa tool</span>
           </div>
           <div class="menu-item">
-            <span class="menu-icon">📦</span>
-            <span class="menu-text">JSON Tools</span>
+            <span class="menu-text">Base</span>
           </div>
           <div class="menu-item">
-            <span class="menu-icon">⚙️</span>
-            <span class="menu-text">Settings</span>
+            <span class="menu-text">Emulators</span>
           </div>
         </nav>
 
         <div class="sidebar-footer">
-          <span class="footer-text">© 2025 FITS</span>
+          <span class="footer-text">flowerinthesea2025@gmail.com</span>
         </div>
       </aside>
 
@@ -55,7 +51,7 @@
 
           <div class="topbar-actions">
             <span class="hint">
-              Phím <strong>F</strong> = thu/mở sidebar
+              Phím <strong>F</strong> = đóng/mở sidebar
             </span>
             <button id="toggleThemeBtn" class="theme-btn">
               Đổi nền: Trắng / Đen
@@ -67,21 +63,17 @@
           <section class="card">
             <h2>Chào mừng tới FITS</h2>
             <p>
-              Đây là layout cơ bản với sidebar. Bạn có thể thêm các công cụ như
-              chọn nhân vật Arknights, tính hiệu suất base, export JSON cho MAA
-              vào khu vực nội dung này.
+              FIST là trang web chia sẻ về Base, Emulators và nhiều chủ đề khác sẽ được cập nhật trong tương lai.
+              Phần mềm tự động hoá chơi, story thư viện về game trên github và hỗ trợ xuất file json cho MAA.
             </p>
           </section>
 
           <section class="card">
             <h3>Hướng dẫn nhanh</h3>
             <ul>
-              <li>Nhấn chữ <strong>F</strong> trên bàn phím để thu gọn / mở sidebar.</li>
+              <li>Nhấn chữ <strong>F</strong> trên bàn phím để đóng / mở sidebar.</li>
               <li>Click vào nút chữ <strong>F</strong> trong sidebar cũng được.</li>
               <li>Nhấn nút <strong>Đổi nền: Trắng / Đen</strong> để chuyển theme.</li>
-              <li>
-                Thêm code và UI cho tool của bạn vào phần <code>&lt;main class="content"&gt;</code>.
-              </li>
             </ul>
           </section>
         </main>
