@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="vi-en">
+<html lang="vi,en">
   <head>
     <meta charset="UTF-8" />
     <title>FITS</title>
@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/png" href="logo.png" /> 
   </head>
-  <!--dark mode-->
-  <body class="light-theme">
+  <body class="light">
     <div class="app">
       <!-- SIDEBAR -->
       <aside class="sidebar">
@@ -25,18 +24,18 @@
         </div>
 
         <nav class="sidebar-menu">
-          <div class="menu-item active">
+          <button class="menu-item active" data-view="dashboard">
             <span class="menu-text">Dashboard</span>
-          </div>
-          <div class="menu-item">
+          </button>
+          <button class="menu-item" data-view="maa-tool">
             <span class="menu-text">Maa tool</span>
-          </div>
-          <div class="menu-item">
+          </button>
+          <button class="menu-item" data-view="base">
             <span class="menu-text">Base</span>
-          </div>
-          <div class="menu-item">
+          </button>
+          <button class="menu-item" data-view="emulators">
             <span class="menu-text">Emulators</span>
-          </div>
+          </button>
         </nav>
 
         <div class="sidebar-footer">
@@ -60,26 +59,85 @@
         </header>
 
         <main class="content">
-          <section class="card">
-            <h2>Chào mừng tới FITS</h2>
-            <p>
-              FIST là trang web chia sẻ về Base, Emulators và nhiều chủ đề khác sẽ được cập nhật trong tương lai.
-              Phần mềm tự động hoá chơi, story thư viện về game trên github và hỗ trợ xuất file json cho MAA.
-            </p>
+          <section class="view active" data-view="dashboard">
+            <section class="card">
+              <h2>Chào mừng tới FITS</h2>
+              <p>
+                FIST là trang web chia sẻ về Base, Emulators và nhiều chủ đề khác sẽ được cập nhật trong tương lai.
+                Phần mềm tự động hoá chơi, story thư viện về game trên github và hỗ trợ xuất file json cho MAA.
+              </p>
+            </section>
+
+            <section class="card">
+              <h3>Hướng dẫn nhanh</h3>
+              <ul>
+                <li>Nhấn chữ <strong>F</strong> trên bàn phím để đóng / mở sidebar.</li>
+                <li>Click vào nút chữ <strong>F</strong> trong sidebar cũng được.</li>
+                <li>Nhấn nút <strong>Đổi nền: Trắng / Đen</strong> để chuyển theme.</li>
+              </ul>
+            </section>
           </section>
 
-          <section class="card">
-            <h3>Hướng dẫn nhanh</h3>
-            <ul>
-              <li>Nhấn chữ <strong>F</strong> trên bàn phím để đóng / mở sidebar.</li>
-              <li>Click vào nút chữ <strong>F</strong> trong sidebar cũng được.</li>
-              <li>Nhấn nút <strong>Đổi nền: Trắng / Đen</strong> để chuyển theme.</li>
-            </ul>
+          <section class="view" data-view="maa-tool">
+            <section class="card">
+              <h2>Maa Tool</h2>
+              <p>
+                Công cụ MAA (Maa Automation Assistant) giúp bạn tự động hoá các tác vụ trong game.
+                Bạn có thể tạo kịch bản tự động để chơi game hoặc thực hiện các tác vụ lặp đi lặp lại.
+              </p>
+            </section>
+
+            <section class="card">
+              <h3>Tính năng chính</h3>
+              <ul>
+                <li>Tự động hoá game thông qua các script</li>
+                <li>Hỗ trợ xuất file JSON</li>
+                <li>Giao diện trực quan và dễ sử dụng</li>
+              </ul>
+            </section>
+          </section>
+
+          <section class="view" data-view="base">
+            <section class="card">
+              <h2>Base</h2>
+              <p>
+                Thư viện Base chứa các tài nguyên và dữ liệu cơ bản cho các trò chơi được hỗ trợ.
+                Đây là nền tảng cho các tính năng khác trong FITS.
+              </p>
+            </section>
+
+            <section class="card">
+              <h3>Nội dung</h3>
+              <ul>
+                <li>Thư viện dữ liệu game</li>
+                <li>Cấu hình máy chủ</li>
+                <li>Tài liệu hướng dẫn</li>
+              </ul>
+            </section>
+          </section>
+
+          <section class="view" data-view="emulators">
+            <section class="card">
+              <h2>Emulators</h2>
+              <p>
+                Danh sách các emulator được hỗ trợ và hướng dẫn cài đặt.
+                FITS tương thích với nhiều emulator phổ biến để chạy game trên máy tính.
+              </p>
+            </section>
+
+            <section class="card">
+              <h3>Emulator được hỗ trợ</h3>
+              <ul>
+                <li>MuMu Emulator</li>
+                <li>NoxPlayer</li>
+                <li>BlueStacks</li>
+                <li>LDPlayer</li>
+              </ul>
+            </section>
           </section>
         </main>
       </div>
     </div>
-
     <script src="script.js"></script>
   </body>
 </html>

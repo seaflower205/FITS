@@ -3,6 +3,52 @@ const sidebar = document.querySelector(".sidebar");
 const toggleSidebarBtn = document.getElementById("toggleSidebarBtn");
 const toggleThemeBtn = document.getElementById("toggleThemeBtn");
 
+// --- THEME INITIALIZATION ---
+function initializeTheme() {
+  // Ensure body has correct theme class on page load
+  const body = document.body;
+  if (!body.classList.contains("dark") && !body.classList.contains("light")) {
+    // Default to light theme if no theme class exists
+    body.classList.add("light");
+  }
+}
+
+// Initialize theme immediately
+initializeTheme();
+
+// --- VIEW SWITCHING ---
+function initViewSwitching() {
+  const menuItems = document.querySelectorAll(".menu-item[data-view]");
+  const views = document.querySelectorAll(".view[data-view]");
+
+  menuItems.forEach((menuItem) => {
+    menuItem.addEventListener("click", () => {
+      const targetView = menuItem.getAttribute("data-view");
+
+      // Ẩn tất cả views, hiện view được chọn
+      views.forEach((view) => {
+        if (view.getAttribute("data-view") === targetView) {
+          view.classList.add("active");
+        } else {
+          view.classList.remove("active");
+        }
+      });
+
+      // Cập nhật active class trên menu items
+      menuItems.forEach((item) => {
+        if (item.getAttribute("data-view") === targetView) {
+          item.classList.add("active");
+        } else {
+          item.classList.remove("active");
+        }
+      });
+    });
+  });
+}
+
+// Gọi hàm khi DOM sẵn sàng
+initViewSwitching();
+
 // --- TOGGLE SIDEBAR ---
 function toggleSidebar() {
   sidebar.classList.toggle("collapsed");
